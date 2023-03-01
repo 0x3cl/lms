@@ -1,0 +1,7 @@
+const checkIfUserExists = () => {
+
+}
+
+const validateBody = () => {
+    
+}
