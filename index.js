@@ -11,9 +11,10 @@ app.use(express.urlencoded({ extended: true }))
 
 // USERS API ENDPOINTS 
 const users = require('./src/api/users')
-
+const courses = require('./src/api/courses')
 
 app.use('/api', users)
+app.use('/api', courses)
 
 app.listen(PORT, () => {
     console.log(`Server Listening on http://localhost:${PORT}`)

@@ -1,7 +1,7 @@
 const router = require('express').Router()
 const secureApi = require('../middleware/authApi')
-const { checkIfUserStudentExists, validateBody } = require('../middleware/validation-middleware')
-const userModel = require('../model/admin/userModel')
+const { checkIfUserStudentExists, checkIfUserTeacherExists, validateUserStudent, validateUserTeacher } = require('../middleware/validation-middleware')
+const userModel = require('../model/admin/user-model')
 
 
 // FETCH ALL USERS
@@ -26,7 +26,7 @@ router.get('/view/user/student/:id', secureApi, (req, res) => {
 })
 
 // CREATE STUDENT USERS
-router.post('/create/user/student', validateBody, checkIfUserStudentExists, (req, res) => {
+router.post('/create/user/student', validateUserStudent, checkIfUserStudentExists, (req, res) => {
     userModel.createUserStudent(req.body, req, res)
 })
 
@@ -60,6 +60,11 @@ router.get('/view/user/admin', secureApi, (req, res) => {
 // FETCH SINGLE ADMIN USERS
 router.get('/view/user/admin/:id', secureApi, (req, res) => {
     userModel.viewAdminsByID(req, res)
+})
+
+// CREATE TEACHERS USERS
+router.post('/create/user/teacher', validateUserTeacher, checkIfUserTeacherExists, (req, res) => {
+    userModel.createUserTeacher(req.body, req, res)
 })
 
 

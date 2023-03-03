@@ -1,9 +1,10 @@
 ###
+# Create Student User
 POST  http://localhost:8080/api/create/user/student
 Content-Type: application/json
 
 {
-    "id": "01-2023-02",
+    "id": "01-2023-01",
     "role": "1",
     "email": "itachi@email.com  ",
     "username": "itachi01",
@@ -12,15 +13,95 @@ Content-Type: application/json
     "joinedOn": "",
     "first_name": "carl",
     "last_name": "llemos",
-    "bday": "april 18 2002",
+    "birthday": "2002-04-18",
+    "civil_status": "single",
     "gender": "male",
     "bio": "",
     "address": "somewhere",
     "municipality": "rizal",
     "city": "taytay",
-    "course": "bsit",
+    "course": "1",
     "year": "1",
     "section": "1",
     "fb_link": "",
     "ig_link": ""
 }
+
+###
+# Create Teacher User
+POST http://localhost:8080/api/create/user/teacher
+Content-Type: application/json
+
+{
+    "id": "02-2023-01",
+    "role": "2",
+    "email": "teacher01@email.com",
+    "username": "teacher01",
+    "password": "password",
+    "status": "0",
+    "joinedOn": "",
+    "first_name": "carl",
+    "last_name": "llemos",
+    "birthday": "2002-04-18",
+    "civil_status": "single",
+    "gender": "male",
+    "bio": "",
+    "address": "somewhere",
+    "municipality": "rizal",
+    "city": "taytay",
+    "fb_link": "",
+    "ig_link": ""
+}
+
+###
+# View All Users
+GET http://localhost:8080/api/view/user/all
+
+###
+# View All Students
+GET http://localhost:8080/api/view/user/student
+
+###
+# View Specific Student User
+GET http://localhost:8080/api/view/user/student/01-2023-01
+
+###
+# View All Teachers
+GET http://localhost:8080/api/view/user/teacher
+
+###
+# View Specific Teacher User
+GET http://localhost:8080/api/view/user/teacher/02-2023-01
+
+###
+# View All Courses
+GET http://localhost:8080/api/view/course/all
+
+###
+# View Specific Course
+GET http://localhost:8080/api/view/course/bsba
+
+###
+# Create Or Add Course
+POST http://localhost:8080/api/create/course
+Content-Type: application/json
+
+{
+    "name": "bsis",
+    "description": "bachelor of science in information system"
+}
+
+###
+# UPDATE COURSE 
+PUT http://localhost:8080/api/update/course/5
+Content-Type: application/json
+
+{
+    "name": "bsis",
+    "description": "bachelor of science in information system"
+}
+
+### 
+# DELETE COURSE
+DELETE http://localhost:8080/api/delete/course/4
+
