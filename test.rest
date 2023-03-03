@@ -1,0 +1,26 @@
+###
+POST  http://localhost:8080/api/create/user/student
+Content-Type: application/json
+
+{
+    "id": "01-2023-02",
+    "role": "1",
+    "email": "itachi@email.com  ",
+    "username": "itachi01",
+    "password": "password",
+    "status": "0",
+    "joinedOn": "",
+    "first_name": "carl",
+    "last_name": "llemos",
+    "bday": "april 18 2002",
+    "gender": "male",
+    "bio": "",
+    "address": "somewhere",
+    "municipality": "rizal",
+    "city": "taytay",
+    "course": "bsit",
+    "year": "1",
+    "section": "1",
+    "fb_link": "",
+    "ig_link": ""
+}

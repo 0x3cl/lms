@@ -22,7 +22,9 @@ const secureApi = (req, res, next) => {
     //         }
     //     })
     // }
-    req.params.id = sanitizeParam(req.params.id)
+    if(req.params.id) {
+        req.params.id = sanitizeParam(req.params.id)
+    } 
     next()
 }
 
