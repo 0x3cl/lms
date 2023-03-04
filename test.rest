@@ -1,3 +1,10 @@
+### View All Admin User
+GET http://localhost:8080/api/view/user/admin
+
+### View Specific Admin User
+GET http://localhost:8080/api/view/user/admin/1
+
+
 ###
 # Create Student User
 POST  http://localhost:8080/api/create/user/student
@@ -92,16 +99,57 @@ Content-Type: application/json
 }
 
 ###
-# UPDATE COURSE 
-PUT http://localhost:8080/api/update/course/5
+
+# Update Course
+PUT http://localhost:8080/api/update/course/7
 Content-Type: application/json
 
 {
     "name": "bsis",
-    "description": "bachelor of science in information system"
+    "description": "bachelor of science in information systems"
 }
 
 ### 
-# DELETE COURSE
-DELETE http://localhost:8080/api/delete/course/4
+# Delete Course
+DELETE http://localhost:8080/api/delete/course/7
+
+###
+# View All Subjects
+GET http://localhost:8080/api/view/subject/all
+
+###
+#  View Specific Subject
+GET http://localhost:8080/api/view/subject/11
+
+###
+# Create Subject 
+POST http://localhost:8080/api/create/subject
+Content-Type: application/json
+
+{
+    "course_id": "2",
+    "code": "itc12225",
+    "name": "introduction to system analyst",
+    "description": "lorem ipsum",
+    "accessed_by_year": "1",
+    "accessed_by_section": "2"
+}
+
+###
+# Update Subject
+PUT http://localhost:8080/api/update/subject/11
+Content-Type: application/json
+
+{
+    "course_id": "2",
+    "code": "itc1225",
+    "name": "introduction to system analyst",
+    "description": "lorem ipsum",
+    "accessed_by_year": "1",
+    "accessed_by_section": "2"
+}
+
+###
+# Delete Subject
+DELETE http://localhost:8080/api/delete/subject/11
 
